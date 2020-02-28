@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Be+Vietnam" rel="stylesheet">
+    <title>Responsive Menu</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Be Vietnam',sans-serif;
+    }
+    section{
+        width:100%;
+        height:100vh;
+        object-fit: cover;
+        position: relative;
+        background-color: #fafafa;
+       
+    }
+    nav {
+        background-color: #ffffff;
+        width:100%;
+        height:80px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+    padding: 20px;
+    }
+     main{
+         position: absolute;
+         bottom:10px;
+        text-align: center;
+     }
+     ul{
+        display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 80px;
+     }
+     a{
+         color:#272c42;
+         text-decoration: none;
+         font-size:1.2rem;
+         padding: 10px;
+         letter-spacing: 1px;
+     }
+     a:hover{
+        color:#f9f9f9;
+        transition: all 0.5s ease-in-out;
+        font-weight: 500;
+        filter: drop-shadow(2px 4px 6px #ffcbc5);
+        background-color:#ff6640e0;
+       
+         
+     }
+    
+     
+     .fa{
+         display: none;
+     }
+     .top-btn{
+         position:absolute;
+         right:30px;
+         top:10px;
+         z-index:1000;
+         display:none;
+     }
+     .material-icons {
+         font-size: 2.2rem;
+     }
+     @media(max-width:700px){
+  
+        .top-btn{
+         display: block;
+         
+     }
+     
+     ul{
+         justify-content: center;
+      
+         flex-direction: column;
+     }
+     nav{
+         top:0px;
+         left:0px;
+         width:100%;
+        height: 260px;
+        transform: translate(-683px,75px);
+     }
+     .top-btn-show{
+        transform: translate(0px,75px);
+        z-index: 9999;  
+        box-shadow: 0px 0px 10px 100px #adadad1f;
+        transition:all  0.8s ease-out;
+      
+        
+     }
+     .material-icons:hover{
+         color:#f78d73;
+         display: block;
+     }
+     .logo{
+         display: none;
+     }
+      
+     
+     a{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  
+     }
+     span{
+         font-size: 1rem;
+         padding-top:10px;
+
+     }
+     
+     a:hover{
+        background-color:#ff6640e0;
+    
+     }
+     }
+         </style>
+</head>
+<body>
+        <div class="top-btn">
+        <i class="material-icons" onclick="change()">notes</i>
+    </div>
+    <section>
+        <header>
+          
+       <nav id="togl">
+            <div class="logo">
+                    <img src="logo2.svg" alt="logo">
+                </div>
+           <ul>
+               
+          <li><a href="#">
+               <i class="fa fa-dashboard"></i>
+            <span>Pricing</span>   
+           </a>
+        </li>
+        <li><a href="#">
+                <i class="fa fa-user"></i>
+             <span>Product</span>   
+            </a>
+         </li>
+         <li><a href="#">
+                <i class="fa fa-envelope-o"></i>
+             <span>About Us</span>   
+            </a>
+         </li>
+         <li><a href="#">
+                <i class="fa fa-cogs"></i>
+             <span>Carrers</span>   
+            </a>
+         </li>
+         <li><a href="#">
+                <i class="fa fa-download"></i>
+             <span>Community</span>   
+            </a>
+         </li>
+        
+        </ul>
+       </nav>
+    </header>
+    </section>
+
+   
+    <script>
+     const change=()=>{
+                        var tog = document.getElementById("togl");
+                        tog.classList.toggle("top-btn-show");
+                        
+                                       
+                                 }  
+    </script>
+</body>
+</html>

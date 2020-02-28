@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Iconbar</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto',sans-serif;
+    }
+    section{
+        width:100%;
+        height:100vh;
+        object-fit: cover;
+        position: relative;
+        background-color: #5d5b94;
+       
+    }
+    nav {
+        background-color: #4AD5BD;
+        width:100%;
+        height:80px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+    align-items: center;
+    padding: 20px;
+    }
+     main{
+         position: absolute;
+         bottom:10px;
+        text-align: center;
+     }
+     ul{
+        display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 80px;
+     }
+     a{
+         color:#FEFFFF;
+         text-decoration: none;
+         font-size:1.2rem;
+         padding: 10px;
+         letter-spacing: 1px;
+     }
+     a:hover{
+        color:#fff;
+        transition: all 0.5s ease;
+        font-weight: 500;
+        filter: drop-shadow(2px 4px 6px #f6f6f6);
+        background-color: #64e0cb;
+       
+         
+     }
+    
+     
+     .fa{
+         display: none;
+     }
+     @media(max-width:768px){
+  
+   
+     .fa{
+         display: block;
+     }
+     ul{
+         justify-content: center;
+     }
+     nav{
+         bottom:0px;
+         left:0px;
+     }
+     .logo{
+         display: none;
+     }
+     .h-link{
+         display: none;
+     }
+     a{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    outline: none;
+    letter-spacing: 0.3px;
+    width: 90px;
+    height:50px;
+  
+     }
+     span{
+         font-size: 1rem;
+         padding-top:10px;
+
+     }
+     }        
+     a:hover{
+        background-color: #64e0cb;
+     }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+          
+       <nav>
+            <div class="logo">
+                    <img src="logo.svg" alt="logo">
+                </div>
+           <ul>
+               
+          <li><a href="#">
+               <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>   
+           </a>
+        </li>
+        <li><a href="#">
+                <i class="fa fa-user"></i>
+             <span>Profile</span>   
+            </a>
+         </li>
+         <li><a href="#">
+                <i class="fa fa-envelope-o"></i>
+             <span>Messages</span>   
+            </a>
+         </li>
+         <li><a href="#">
+                <i class="fa fa-cogs"></i>
+             <span>Settings</span>   
+            </a>
+         </li>
+         <li><a href="#" class="h-link">
+                <i class="fa fa-download"></i>
+             <span>Download</span>   
+            </a>
+         </li>
+         <li><a href="#" class="h-link">
+                <i class="fa fa-book"></i>
+             <span>Contact</span>   
+            </a>
+         </li>
+        </ul>
+       </nav>
+    </header>
+    </section>
+
+   
+    <script>
+       const videoch=(oc)=>{
+        document.getElementById("slider").style.transition="all 1s ease";
+       document.getElementById("slider").src=oc;
+       
+           
+
+       }
+    </script>
+</body>
+</html>
